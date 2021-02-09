@@ -1,0 +1,23 @@
+{
+    "name": "app",
+    "type": "module",
+    "version": "1.0.0",
+    "description": "",
+    "main": "source/index.js",
+    "config": {
+        "main": "source/index.js",
+        "test_folder": "tests"
+    },
+    "scripts": {
+        "start": "node $npm_package_config_main",
+        "test": "jest",
+        "test:watch": "jest --watchAll"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/plugin-transform-modules-commonjs": "^7.12.13",
+        "jest": "^26.6.3"
+    },
+    "dependencies": {}
+}
