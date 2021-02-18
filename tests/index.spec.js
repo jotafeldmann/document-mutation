@@ -53,7 +53,7 @@ describe('generateUpdateStatement', () => {
     });
   });
 
-  describe.skip('Update, Add and Remove in single statement', () => {
+  describe('Update, Add and Remove in single statement', () => {
     it('INPUT: Remove post with _id of 2', () => {
       expect(
         generateUpdateStatement(document, {
@@ -66,7 +66,7 @@ describe('generateUpdateStatement', () => {
       ).toEqual({
         $update: { 'posts.0.value': 'too' },
         $add: { posts: [{ value: 'four' }] },
-        $remove: { 'posts.1': true },
+        $remove: { 'posts.2': true },
       });
     });
   });
