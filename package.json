@@ -9,11 +9,11 @@
         "test_folder": "tests"
     },
     "scripts": {
-        "start": "node $npm_package_config_main",
+        "start": "npm test",
         "test": "jest",
         "test:watch": "jest --watchAll"
     },
-    "author": "",
+    "author": "Jorge Feldmann",
     "license": "ISC",
     "devDependencies": {
         "@babel/plugin-transform-modules-commonjs": "^7.12.13",

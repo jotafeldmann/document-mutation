@@ -1,4 +1,4 @@
-# Overview
+# Purpose
 
 Theres a document database (amongst other storage solutions) to store
 high volume application data. Often, the application needs to manage an array of
