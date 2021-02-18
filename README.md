@@ -5,8 +5,19 @@ Library: given a document and a mutation, must generate the database update stat
 ## Requirements
 
 - [Node.js 15 and NPM](https://nodejs.org/en/download/)
+- Optional but recommended: [Docker](https://docs.docker.com/get-docker/)
 
 ## Setup
+
+### Docker
+
+- Easy way, using docker
+
+```bash
+make
+```
+
+### Local
 
 - Clone
 
