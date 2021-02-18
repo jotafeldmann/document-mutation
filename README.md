@@ -1,4 +1,4 @@
-# Document Mutation
+# Document Mutation [![Node.js CI](https://github.com/jotafeldmann/document-mutation/actions/workflows/node.js.yml/badge.svg)](https://github.com/jotafeldmann/document-mutation/actions/workflows/node.js.yml)
 
 Library: given a document and a mutation, must generate the database update statements.
 
