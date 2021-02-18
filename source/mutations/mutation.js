@@ -15,6 +15,7 @@ export const getMutations = (mutations) => {
         generateMutation({
           key,
           mutation,
+          obj: mutations[key],
         })
       )
     )
@@ -26,10 +27,10 @@ export const getMutations = (mutations) => {
   return mutationsMap;
 };
 
-const generateMutation = ({ key, mutation }) => {
+const generateMutation = ({ key, mutation, obj }) => {
   const { _id, ...props } = mutation;
   if (isUpdateMutation(mutation)) {
-    return generateUpdateMutation({ _id, key, props });
+    return generateUpdateMutation({ _id, key, props, obj });
   }
 };
 
