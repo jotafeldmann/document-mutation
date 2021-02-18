@@ -37,7 +37,7 @@ describe('generateUpdateStatement', () => {
     });
   });
 
-  describe.skip('Appending to existing arrays', () => {
+  describe('Appending to existing arrays', () => {
     it('INPUT: Add post; notice that there is no _id because the post doesnt exist yet', () => {
       expect(
         generateUpdateStatement(document, { posts: [{ value: 'four' }] })

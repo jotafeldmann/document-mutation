@@ -1,5 +1,6 @@
 import { Mutation } from './mutation';
 import { isSubProp } from './subProp';
+import { isValidId } from './isValidId';
 
 export const getProp = ({ prop, value, obj }) => {
   if (!isSubProp(prop)) {
@@ -25,7 +26,11 @@ export const getProp = ({ prop, value, obj }) => {
   return '';
 };
 
-export const isUpdateMutation = ({ _id } = {}) => !isNaN(parseInt(_id, 10));
+export const isSubPropUpdate = (mentions = []) =>
+  !!mentions.filter((m) => isValidId(m._id)).length;
+
+export const isUpdateMutation = ({ _id, mentions } = {}) =>
+  (isValidId(_id) && !mentions) || isSubPropUpdate(mentions);
 
 export const generateUpdateMutation = ({ _id, key, props, obj }) => {
   const [prop, value] = Object.entries(props)[0];
